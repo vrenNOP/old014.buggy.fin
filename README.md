@@ -13,3 +13,5 @@ Last mod: 010115.
 
 0
 ** Created Range: 09/08 14 to. Present(?)
+
+(Changed typo in name: reademe-->readme
