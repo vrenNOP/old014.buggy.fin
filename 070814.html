@@ -1,0 +1,67 @@
+<!doctype html><html><head><style type="text/css">
+body {background-color:black;}
+pre {white-space:pre-wrap; color:green;} /*otherwise doesn't show up because default=black. d'uh.*/
+canvas {border: double lightblue;}
+
+</style></head><body>
+<canvas id="e" height="1000" width="1000"></canvas>
+<pre>
+</pre><script>
+var ctx = document.getElementById("e").getContext("2d");
+
+function face(n,x,y){
+ctx.beginPath(); ctx.lineWidth="1";	
+ctx.strokeText(n, x,y);
+ctx.arc(x,y,30, 0, 2*Math.PI);
+ctx.stroke();
+ctx.beginPath(); ctx.lineWidth="2";
+ctx.moveTo(x+30, y);
+ctx.lineTo(x+90, y);
+ctx.stroke();
+}
+
+var x1=120; y1=120;
+ctx.strokeStyle="orange";
+face("character Name", x1,y1);
+var x1=2*(x1)+60; y1=y1;
+face("Jared", x1, y1);
+face("Molly", x1-24, y1+70);
+face("Tea", x1-80, y1+140-20);
+face("Orion", x1-120, y1+210-20);
+ctx.strokeStyle="blue";
+var x1=x1+100; y1=y1;
+face("Royals Name", x1,y1);
+face("JimmyM", x1*2,y1*2 );
+face("PatrescheT", x1, y1*3);
+ctx.strokeStyle="green";
+var x1=x1*2; y1=y1*3;
+face("Clampods Name", x1, y1);
+face("Alexson", x1-40, y1-45);
+
+function circle (x,y,es,ee, eo){ //=x,y,eyeStart,eyeEnd, eyeOffset
+ctx.beginPath(); ctx.strokeStyle="grey";
+//. head
+ctx.arc(x,y,30, 0, 2*Math.PI); 
+ctx.stroke();
+//. eyes; right first
+var er=10; //=eyeRadius
+ctx.beginPath(); ctx.arc(x-20,y-eo,er, es, ee*Math.PI);
+ctx.fill();
+ctx.beginPath(); ctx.arc(x+20,y-eo, er, es, ee*Math.PI);
+ctx.fill();
+//. mouth
+ctx.beginPath(); ctx.strokeStyle="maroonk"; ctx.lineCap="blunt";
+ctx.arc(x,y+6,er+2, 0, 1*Math.PI);
+ctx.stroke();
+}
+
+ctx.fillStyle="darkblue";
+circle(x1-152, y1-54, 0,1,20);
+circle(x1-202, y1-109,1*Math.PI, 0, 5);
+ctx.fillStyle="maroon";
+circle(x1-218, y1-34, 1*Math.PI, 25*Math.PI/180, -10);
+
+</script>
+
+
+</body></html>

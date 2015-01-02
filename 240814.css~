@@ -1,0 +1,33 @@
+
+body {
+	background-color:black; color:lightgrey; }
+pre:not(*#nav) {
+	white-space:pre-wrap; margin:10%; float:left;}
+hr, div {
+	background-color:transparent; border:none ; margin:10%; height:10px;
+	box-shadow: 0 0px 100px 0px lightblue, inset 0 0 0px 0px ;
+	border-radius:50%;
+	 }
+
+/*--links, navigation, italics--*/
+#nav {
+	float:right; }
+a, i:not(.no) {	
+	color:lightblue; text-decoration:none; }
+
+/*--lists, headings, --*/
+#ht~ul li, ul {	
+	list-style-type:square; margin:0; padding-top:0;}
+h2:not(#ht) {
+	text-align: right; background-color: grey; color:black; padding:0; margin:0;}
+li::first-letter
+	{color: green;}
+
+/*--tables--*/
+td:nth-child(2n-1) {
+	color:lightblue;}
+/*-borders-*/
+tr:nth-child(1)>td {
+	border-bottom:4px dotted grey;}
+td {
+	border-bottom:dotted 2px grey; padding-right:2%;}

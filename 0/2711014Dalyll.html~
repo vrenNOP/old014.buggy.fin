@@ -1,0 +1,25 @@
+<!doctype html><html><head><style type="text/css">
+body {margin-left:20%; background-color: rgba(0,0,0,0.4); /*lightgrey*/;  }
+
+canvas {border: 4px double white; } 
+
+
+/*
+ *
+ */</style></head><body>
+<canvas id="o" height="500" width="500"></canvas> 
+<script type="text/javascript" src="2711014Dalyll.js"></script><br>
+
+
+<b>Notes and Debuggery</b><ol>
+<li>#forgot it is <i>script type=</i>, not simply "script=". //.
+<li> canvas is not rendering css for <i>border: double 24px lightblue</i>.. After some thought, neither is background-color for the body. Something in the #css has been muddled.. //. <i>style type="text/css"</i> was #mistyped as "txt". 
+<li>Wasn't importing external #js. #forgot to include in paste (or cutting of text) the <i>var ctx=...; c=..</i> lines. //.
+<li>Change canvas #js: x co-ordinates of <i>strokeText</i> to conform to  end of text rather than start? [Unless otherwise specified, the textAlign property is defaulted to start.](Unless otherwise specified, the textAlign property is defaulted to start.). Nice. #later//
+<li> ed: <i>closePath();</i> #doesntWork to "close in" formatting for one shape or another.
+<li> keep #forget ting that <i>ctx.font</i> is a (compulsory) unit-size (pt, px, etc) first.
+<li>#forgot animated #js: simple movement is simply <i> x+; y+ </i> combined with <i>setIncrement</i>. The <i>if</i> functions come in only with bounce.
+<li> Increment variables apparently do not work with <i>var</i> prepended to line.. an edd: #later.
+<li> #bug? Same values and still referred outside of drawing function but, for whatever reason, #doesnWork from indirectDraw+
+
+</body></html>

@@ -1,0 +1,67 @@
+<!doctype html><html><head><title>
+110714, first time on tabl </title><style type="text/css">
+pre {background-color: #C4C4C4; margin:20%;}
+canvas {border:double lightblue 14px; }
+
+
+
+</style></head><body>
+<pre>
+ijhggernerng gjejrg gjerng r
+gjneignregi gjerg ererg egjgng 
+gneirgireg guebrgegnigiegh
+jgngriggigkg gi
+
+<canvas id="e" height="500" width="500"></canvas><script>
+var c=document.getElementById("e").getContext("2d");
+
+//circle.
+var x=120; y=x;
+//function ch(x,y){
+ctx.beginPath();
+ctx.arc(x,y,53,0,2*Math.PI);
+ctx.stroke();
+//ctx.font="20px verdana"
+//ctx.fillText(x,y,n);
+//ctx.fill();
+//}
+//ch(120,120);
+
+
+</script>
+one day a taniwhawent swimming in moana 
+he whispered softly in my tainga
+oh won't you come with me 
+there's such a lot to see underneth the deep blue sea
+isay oh no no, i've got to gog go
+but will you still be firends with me
+my mother i waitng for me 
+underneath the kowhai tree
+oh taniwha haere e ratblue;}
+haere e ra 
+
+---
+mythical beasts coming from  nowhere 
+entice a slow comeone, over here, there's a mirro world where you can't see
+and wonders of long you couldn't have ever fathomed
+come over here and bask, i'll be you guide, just take my hand
+you won't regret you won't demand
+there's a world out there that you'll actually, i gaurantee, 
+you'll want to see
+
+maybe there's a danger, but that's not why i said no
+the next day, i'll go searching for the missed opportunity
+a waste from being scared of upsetting the higher authoity
+to find a paradise land waiting
+but no guide
+but they'll be back while i'm waiting and some day seen
+near and again, maybe a few years
+the guide'll come whisprering again
+a breeze the call
+
+<table>
+<tr><td>
+
+</table>
+
+</pre></body></html>

@@ -1,0 +1,108 @@
+<!doctype html><html><head>
+<title>240814, sql on android-pad 
+</title><link rel="stylesheet" href="240814.css"></head><body><pre>
+<p id="nav">
+	<a href="#te">Curent test </a>
+	<a href="#app">Applications</a>
+	<a href="#cr">CREATE +datatypes </a>
+	<a href="#sp">Session Misspells </a>
+	<a href="#ht">misc html.. </a>
+
+
+
+</p></pre>
+
+<pre>
+<h2 id="app">Applications installed</h2>
+<li>
+<li>^ed #ide jota+
+<li> ^later #ide https://codeanywhere.com/#mobileSupport
+</ol>
+
+
+<h2 id="cr">CREATE statement and datatype explanations</h2>
+<i class="no">..after a day of messing with input sctuff..</i>	
+<br>	<table>Datatypes
+<tr><td>input <td>means.. <td>example <td>means..<td>variations:
+<tr><td>varchar<td>varying length of input; alphanumeral; non-unicode; maxiumum input (in parenthesis) is optional<td>varchar(20)<td>varchar, 20 characters in input maximum.<td> char()=fixed length; space placeholders in storage, text=non-standard datatype separate from table objects (see <a href="http://www.pythian.com/blog/text-vs-varchar/">here</a>), 
+<tr><td>smallint <td>numeric data, fixed max-value, negative-capable, whole-number only; digits max specified in parenthesis or 32767max<td>smallint(4)<td>smallint, 4 digits in input mx <td>bigint, int=2k million digits max, tinyint=255max, 
+<tr><td>float()<td>floating decimal data; unfixed(or specified) number of decimal places.<td>float() 
+#later http://beyondrelational.com/quiz/sqlserver/tsql/2011/questions/89/The-misconception-about-FLOAT.aspx
+<tr>			
+</table>
+generally sourced from <a href="http://www.tutorialspoint.com/sql/sql-data-types.htm">here</a> and <a href="http://www.tutorialspoint.com/sql/sql-data-types.htm">here</a>
+
+
+
+<h2 id="sp">Session Misspellings and forgettings </h2>
+<table><tr><td>string		<td>as..
+<tr>
+</table>	
+
+<hr/---------------------------------------------------------------------------------------------------------------------- >
+
+<ol class="270814"> 
+<li> Application: SQLite Magic
+<li>database created with menu items as .db3 #ed.//#w  
+<li> large input of several tables (first FK-referencing the latter) did not work.//
+	- #bug! no "copy" function although clicking on the pen-icon, there is "clear", "paste", etc.
+	- also could not clear the currently active code "tab" with the above action
+	- whilst generally, when the code has not been run at least once, it doesn't bother to save 111
+<li>single table ("strawhats") created with single column called "Name"; a primary key.//
+<li> foreign key as has been learned at [forgotten or various sources] eg. <i>Name FOREIGN KEY REFERENCES Characters(Name)</i> does not work.//
+	- at <a href="http://stackoverflow.com/questions/11545189/sqlite-foreign-key">stackoverflow</a>,  <i>FOREIGN KEY(checklist_id) REFERENCES checklist(_id)</i> is found.
+	- You need to declare it before you want to set it as FOREIGN KEY. {does not make sense but basically although conflict can arise from things like datatype having already been declared in the mirror primary-key, first declare there is a column as per usual (comman and all) then add the key-link reference thing. seen more prominently at <a href="http://alvinalexander.com/android/sqlite-foreign-keys-example">alivinalexander.com</a> here. #SQLite #w
+<li>{ wow.  this is a really in-depth program. triggers, indexes, constraints, db info and sql all there with some swipes. zoom for tables-view looks like a life-fustration-saver. given would be more useful if could skip to a certain view(swipes-view not the data(whatever it is)) through menu or quick click..
+<li> #later http://beyondrelational.com/quiz/sqlserver/tsql/2011/questions/89/The-misconception-about-FLOAT.aspx
+<li>
+<li>
+<li><li></ol>
+
+
+
+
+<h2 id="ht">Miscellaneous .html notes </h2>
+<ul><li> for in-page anchor links <i>href</i> is used not <i>src</i>. (only instance of latter so far is in <i>img</i>).
+<li> ~ #later: "Very light blue eyes and big (not dark) bags. Permanent faint, red, streak across his left ear. Dark toes."
+<li> to exclude in #css selectors use <i>:not()</i>. tipped via <a href="http://stackoverflow.com/questions/16201948/how-to-exclude-particular-class-name-in-css-selector">stackoverflow</a>.
+<li>Misspellings and forgets<table>
+<tr><td>string 		<td>as.. 	<td>in syntax..
+<tr><td>nth-child()	<td>nth-chld() <td>css
+</table>
+<li>
+<li>
+
+<li> 270814, <a href="http://css-tricks.com/child-and-sibling-selectors/">css-tricks.com</a> : sibling selectors <i>p+p+div</i> selects every <i>div</i> that is right after two consequent sibling <i>p</i> objects. general siblings, that is, sibling selectors non-consequent invoked by the tiladash(<i>~</i>) symbol.
+<li>making the lovely separator glow..  "<i>box-shadow: 120px 80px 40px 20px #0ff; //
+    	/* in order: x offset, y offset, blur size, spread size, color */
+	/* blur size and spread size are optional (they default to 0) */</i>" 
+courtesy of <a href="http://codersblock.com/blog/creating-glow-effects-with-css/">codersblock.com</a> after following leads from [random sources].
+	<ul><li>- so basically: "box-shadow: x, y, blur, spread, color" with everything up until color being "px" type units. and no commas. #w
+	<li>- odd thing. although <i>background-color</i> is set to transparent, the blurs and so on don't appear inside the <i>hr</i> object
+		<ul><li>- or (just tested) a <i>div</i> object.. "only the inner shadow" is <i>:inset ..</i> as given by commentor at <a href="http://css-tricks.com/snippets/css/css-box-shadow/">css-tricks</a>. 
+		<li>- same source of [codersblock.com] gave multiples of the configuration: comma-delimited properties. eg. <i>":box-shadow: 0 20px 120px 5px pink, 0 0 12px 2px green"</i> (beacuse of course giving the setting-id twice overwrites..doh-moment..)// #w
+</ul></ul><li>~#later "Sweet lord. Emmet has got me grinning all morning"
+<hr/>
+<li> "If we make an element round with border-radius: 50%, then box-shadow will follow suit." -[codersblock.com]. 
+	- <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">w3schools</a> has information on <strike>unit-types</strike> properties-types, including percentage, <i>"inherit"</i>, etc. 
+	- A single unit defined apparently is automatic shorthand for every four corners of the object. 
+	- <a href="http://www.css3.info/preview/rounded-border/">css3.info</a> image demos immediately help to clue in that they stand for the "(rounded) corners" explaining the % as akin to that in jaavscript canvases. 
+		- "The first set of (1-4) values define the horizontal radii for all four corners. An optional second set of values, preceded by a /, define the vertical radii for all four corners. If only one set of values are supplied, these are used to determine both the vertical and horizontal equally." 
+<i>border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;</i>
+<li>keep forgetting that<i>font-family</i> property (and others) have to be applied to the <i>pre</i> tag rather than <i>body</i> overall.
+
+<li> just had a genius(?) idea for <i>list-style-type</i> color: is there an "nth-character" type thing lying around? cue 
+"We also get a couple of text-specific pseudo elements to help with our typography needs: <i>::first-letter, ::first-line</i>" -- <a href="http://css-tricks.com/a-call-for-nth-everything/">css-tricks.com</a>. _{darn griggin it. literally took input as "first letter of object". sigh.}
+<li> 14%batery! #later http://stackoverflow.com/questions/725741/how-to-colour-the-list-style-type-auto-generated-numbers
+
+<li> @jota, you are fairly weird in your syntax highlighting becoming uneven when scroll position is a little off..
+<li> #later, see if can make matching opaque-ish text for <i>hr</i>!
+<li>
+<li>
+<li>
+<li></ul>
+
+
+
+
+</pre></body></html>

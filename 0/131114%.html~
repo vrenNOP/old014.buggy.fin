@@ -1,0 +1,45 @@
+<!doctype html> <html> <head> < style type ="text/Css">
+body {background-color:rgba(0,0,0,0.3);/* =grey*/; margin:20%}
+
+i.n {color: rgba(0,0,0,0.3);/*grey*/;}
+
+li::first-line {font-weight:700;}
+
+</style></head><body>
+
+<pre>
+<h2>Templates: </h2>
+
+Event <i class="n">??<i>
+
+<table><tr>
+<td>Person
+firstName 
+[Alias] [Pseudonym]  
+familyName
+
+<td><b class="1w">relationship from MC perspective
+Relationship from both parties' perspectives
+
+<tr><td>
+<td><b class="1w">relationship from other character's perspective
+firstName of character
+familyName 
+
+<td> Basic Details of Relationship between MC and character
+<li>First Meeting:
+Details Details Details Details Details Details Details Details Details
+Details Details Details Details Details Details Details Details Details
+<li>general Greeting customs:
+Details Details Details Details Details Details Details Details Details
+Details Details Details Details Details Details Details Details Details
+<li> summary of retained Grudges:
+<ul><li>bullet point Details Details Details Details Details Details Details
+<li>Details Details Details Details Details Details Details Details Details
+</ul>
+<li>other Historical details of characters:
+Details Details Details Details Details Details Details Details Details
+Details Details Details Details Details Details Details Details Details
+</ul>
+
+

@@ -1,0 +1,154 @@
+<!doctype html><html><head><title>
+ 140914, canvas character-map #8557
+ </title><style type="text/css">
+body {margin-left:-0.5%;}
+pre {}
+canvas {border: 4px double orange;}
+h4 {color:orange;}
+pre {-webkit-columns: 150px 7;}
+xmp,x, i {white-space:pre-wrap; display:inline; font-style:oblique; font-family:monospace;}
+
+</style></head><body>
+<h2>Wrriting prompts </h2>
+[10-15 18:54] Bypass of device at 186.67.89.14.
+[10-15 18:54] Bypass of device at 182.162.162.59.
+
+
+[10-15 07:29] 186.67.89.14 logged in.
+
+
+<canvas id="o" height="1000" width="1000"></canvas>
+<script>
+var ctx=document.getElementById("o").getContext("2d");
+//*--test shapes - circle//, rectangle_(fill+stroke)//, text(fill+stroke)//,
+//_*--stick into repeating function// and center text into circle (-x)// and rect(- x+y)//.
+
+//_general charcter function -------------------------------------------------------------------------//
+function ch(t, x,y, w,h){
+//var x=120; y=x; r=x;
+ctx.beginPath(); ctx.strokeStyle="blue";
+ctx.arc (x,y,45,0,2*Math.PI);
+ctx.stroke();
+
+//var w=120; h=w;
+ctx.beginPath(); ctx.strokeStyle="red"; ctx.fillStyle="lightgrey";
+//ctx.rect(x-50,y-50,w,h);
+//_ctx.fill(); 
+ctx.stroke();
+
+//_var t="Donnie Web"; 
+var x= x-30;
+ctx.beginPath(); ctx.fillStyle="orange";
+//ctx.strokeText(t, x,y);
+ctx.fillText(t, x,y);
+ctx.stroke(); ctx.fill();
+}
+
+
+//_relational thoughts function. ----------------------------------------------------------------------------//..
+
+function r (c1x,c1y, c2x,c2y){
+//*-- DW<>BC=l1,b2,r3.
+ctx.beginPath(); ctx.lineWidth="3";
+//ctx.moveTo(c1x,c1y);
+  //*--extra line for visible differentiation.
+  var c1y=c1y+15;
+//ctx.lineTo(c1x,c1y);
+//ctx.lineTo(c1x+145,c1y);
+ctx.stroke();
+
+ctx.beginPath();
+  var tl="chance meeting"+">";
+  var tb="library";
+  var tr="<"+"holding hands";
+  var i= 20;
+  var x=c1x; var y=c1y;
+//ctx.fillText(tl,x+i,y);
+//ctx.fillText(tb,x+i*2,y);
+//ctx.fillText(tr,x+i*3,y);
+ctx.fill();
+
+ctx.beginPath();
+//ctx.moveTo(c2x,c2y);
+//*--extra line for visible differentiation.
+  var c2y=c2y-15;
+//ctx.lineTo(c2x,c2y);
+//ctx.lineTo(c2x-145, c2y);
+ctx.stroke();
+
+//~*--  black bar at ends to underlines names of associations to prevent confusion
+//ctx.beginPath(); ctx.strokeStyle="grey";
+//ctx.moveTo(cbx,cby);
+//ctx.lineTo(cex,cey);
+//stroke();
+}
+
+
+
+
+
+
+var x=120; y=x; r=x;
+var w=120; h=w;
+var i=96;
+//*-- docblock(?)
+//args: ch(t,x,y,w,h); r(c1x,c1y, c2x,c2y);
+
+ch("Donnie Web",x,y, w,h); r(x,y,x+i, y);
+ch("Bernice Cross",x+i,y, w,h);
+ch ("Guy Massey",x+i*2,y,w,h);
+ch ("Diane Hoffman",x+i*3,y,w,h);
+ch ("Willis Sherman",x+i*4,y,w,h);
+var y=y+i;
+ch ("Joel Lyons",x,y,w,h);
+ch ("Rosemary May",x+i,y,w,h);
+ch ("Luke Howell",x+i*2,y,w,h);
+ch ("Gloria Wood",x+i*3,y,w,h);
+ch ("Willard Parks",x+i*4,y,w,h);
+
+
+
+
+
+
+
+
+</script>
+<h3>Miscellaneous .html and canvas-tag Notes</h3>
+<li> <i>stroke();</i> was written with (), just as thought. Silly forgotten variables.//
+<li> to make transparent <x>strokeColor</x> use rgba. (Knew it). Elsewhere (adobe?) is syntax of "color.transparent" but not sure it that applies to canvas.
+<h4>150914</h4>
+<li> columns: #html <i>col</i> is deprecated think it was. #css <i> columns: auto|column-width column-count|initial|inherit; </i>. That was the one. Courtesy (again) at <a href="http://www.w3schools.com/cssref/css3_pr_columns.asp">http://www.w3schools.com/cssref/css3_pr _columns.asp</a>. 
+<x>-webkit</x> prefix in #css works for android-pad. Toodles!
+<li> The <xmp><blockquote></xmp> tag specifies a section that is quoted from another source. - W3Schools.  XMP and PRE differ because PRE only sets things as fixed font, all spaces show, and the line breaks start a new line. However, characters such as < > and & were still interpreted by the browser. Without using XMP, I would have to escape all of my < > and & characters. - <a href="http://stackoverflow.com/questions/4545/what-was-the-xmp-tag-used-for">stackoverflow</a>. #works on androidpad//.
+<li>#later _<a href="http://www.w3.org/MarkUp/html-spec/html-spec_5.html#SEC5.5.2.1">html specifications for markup</a>(?)
+
+<h4>180914</h4>
+<li>Linter : <a href="http://www.javascriptlint.com/online_lint.php">Past useful one.</a> Useful today too aybe? "Today".
+<li>
+
+
+
+
+
+
+<h3 ----------------------------------------------------------- > Even More Other Shiz:</h3>
+<li>random place names:
+	<xmp>
+	<div class="content">
+	  <div class="list_container">
+	    <div class="list_item">Adis Abeba</div>
+	    <div class="list_item">Amsterdam</div>
+	    <div class="list_item">Beijing</div>
+	    <div class="list_item">Buenos Aires</div>
+	    <div class="list_item">Johannesburg</div>
+	    <div class="list_item">Mexico City</div>
+	    <div class="list_item">Paris</div>
+	    <div class="list_item">Stockholm</div>
+	  </div>
+	</div>
+	</xmp>
+	
+<li>
+
+</body></html>

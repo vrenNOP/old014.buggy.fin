@@ -1,0 +1,108 @@
+<!doctype html><html>
+<head><style type="text/css">
+body {margin:20%; background-color: rgba(0,0,0,0.4); margin-top:0;} /*lightgrey*/
+h2 {display:; color: rgba(3,3,120,1);}/*navy*/
+	#dn li {list-style-type: none;}
+		#dn li:before{content: ' :: '; color: rgba(3,3,120,1); font-weight:bolder;margin-left:-5%} /*^navy*/
+	#in li {list-style-type: square;}
+canvas {border: solid 24px rgba(0,120,0,0.2); margin-left:-33.3%;} /*lightgreen*/
+
+	a, b {color: rgba(0,120,0,1); text-decoration: none;} /*full^lightgreen*/
+
+pre {-webkit-columns:4 4px;; padding-left:2%; -webkit-column-rule:dotted 3px rgba(0,120,0,0.4);}/*dark^lightgreen*/
+li.nn {color: rgba(0,0,0,0.1);} /*light^lightgrey*/
+
+xmp {padding:0; margin:0; background-color: rgba(0,120,0,0.09); white-space:normal; display:inline} /*light^lightgreen*/
+
+
+</style>
+</head><body>
+ x3 randomWords: 
+<br> Sign, Threat, Queue -- from <a href="http://creativitygames.net/random-word-generator/randomwords/3">creativitygames</a>.
+
+<canvas id="o" width="1000" height="500"></canvas>
+<script ---------------------------------------------------begin script--------------------------------------------------------------- >
+var ctx =document.getElementById("o").getContext("2d");
+var c = o.height/2; q = c/2; 
+
+function ch(t,x,y){
+
+ctx.beginPath();
+//ctx.rect(x,y,w,h);
+ctx.stroke();
+var r= 20;
+ctx.beginPath(); ctx.fillStyle="rgba(0,0,0,0.15)"; //lightgrey
+ctx.arc(x,y,r,0,2*Math.PI);
+ctx.fill(); ctx.stroke();
+var d= 30;
+var x= x-d; y=y+d+4; ctx.font="16px tahoma";
+ctx.strokeText(t,x,y);
+ctx.fillText(t,x,y);
+}
+ch("character", c,c);
+var d=12; d=c+d;
+var ch1x =c+40; i=20;
+ch("Irma Lyons",ch1x+i ,d);
+ch("Andres Bradley", ch1x+i*4,d);
+
+
+
+
+
+</script ----------------------------------------------------end script------------------------------------- >
+
+rma	 Lyons
+Andres	 Bradley
+Toby	 Baker
+Aaron	 Burke
+Diane	 Brewer
+Beatrice Cummings
+Fred	 Doyle
+Robyn	 Carter
+Carol	 Hughes
+Meghan Chavez 
+
+<div id="dn">
+<h2>Miscellaneous Debuggery Notes:</h2>
+<li>With i.c { fill(); }, those brackets are compulsory.//
+<li>In the supposed //~#bug of broken i.c{ li } selecting, the i.c{ id= } bit was simply not input properly in inline [html].//
+<li>With [rgb] colors, to get brighter, ie. in the case of "violet", max out red to the hundreds on. Then add shades of blue. Stronger than the reds value of course.//
+<li class="nn"> i.c { rgba(113,0,225,1) } [rgb] is a good "violet" that looks a bit like "beautyberry"; <a href="http://en.m.wikipedia.org/wiki/Callicarpa">here</a>.//
+<li>The i.c { h2 } i.c{nth-of-type} [css] selector used before works only "within parent" and not "across entire document" as is needed. Thus the whole line of <xmp> 	/** h2:nth-of-type(2) {color: rgb(3,3,120,1);} /*navy?*/ **/ </xmp> is to be #excluded entirely from styles.//
+<li> The i.c{ :before } pseudo-selector(?) in the i.c{ li } elements does not include the "bullet-character" itself. Thus line <xmp> li:before {content: '||'; margin-left:-23%} </xmp> in #css has been #excluded.//
+<li>Line <xmp> #dn li::first-letter {color:rgba(3,3,120,1); font-family:courier; font-weight:bolder;} /*^navy*/ </xmp> has been #excluded because #css selector i.c { ::first-letter } includes this selection and is therefore rendered obselte in required purpose.//
+<li> 	<h3>150814...</h3>
+<li>Aw man i.c{canvas} really doesn't make for writing productvity..
+<li>
+<li>
+<li>
+<li>
+<li>
+<li>
+<li>
+
+</div ----------------------------------------------------------end #dn--------------------------------------------------------------- >
+
+<div id="in">
+<h2>Ideas</h2>
+<li>  x3 randomWords: Sign, Threat, Queue. From <a href="http://creativitygames.net/random-word-generator/randomwords/3">creativitygames</a>.
+<li>Names x10. From <a href="http://random-name-generator.info/">random-name-generator</a>: <pre>
+Irma	 Lyons
+Andres	 Bradley
+Toby	 Baker
+Aaron	 Burke
+Diane	 Brewer
+Beatrice Cummings
+Fred	 Doyle
+Robyn	 Carter
+Carol	 Hughes
+Meghan Chavez </pre>
+<li>
+<li>
+<li>
+<li>
+<li>
+
+</div ---------------------------------------------------------end #in------------------------------------------------------------------- >
+
+</body>
